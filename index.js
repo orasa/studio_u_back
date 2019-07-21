@@ -4,11 +4,21 @@
 const express = require('express')
 require('dotenv').config()
 const app = express()
+const bodyParser = require('body-parser')
 
+// const cors = require('cors')
 require('./db')
 
+
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
+// app.use(cors())
+
 //create route
-app.post('api/category', require('./controllers/category'))
+
+app.post('/api/category', require('./controllers/post_category'))
+
+
 
 
 
@@ -22,7 +32,8 @@ app.post('api/category', require('./controllers/category'))
 app.listen(process.env.PORT, (err) => {
 	if (err) {
 		console.log('ERROR:', err)
-  } else {
-    console.log('Listen on port ${process.env.PORT}')
-  }
+	} else {
+		console.log('Listen on port ${process.env.PORT}')
+	}
 }
+)
