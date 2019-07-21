@@ -15,14 +15,25 @@ app.use(bodyParser.json())
 // app.use(cors())
 
 //create route
-
 app.post('/api/category', require('./controllers/post_category'))
-app.get('/api/category', require('./controllers/get_category'))
+app.get('/api/category', require('./controllers/get_categories'))
 
+// choice is display on content page
 
+app.post('/api/choice', require('./controllers/post_choice'))
+app.get('/api/choice',  require('./controllers/get_choices'))
 
+//
 
-
+// app.post('/api/video', require('./controllers/post_video'))
+// app.get('/api/video', require('./controllers/get_video'))
+//
+// //
+// app.post('/api/user', require('./controllers/post_user'))
+// app.get('/api/user', require('./controllers/get_user'))
+//
+// app.post('/api/message', require('./controllers/post_message'))
+// app.get('/api/messages', require('./controllers/get_messages'))
 
 
 
