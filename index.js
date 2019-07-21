@@ -17,6 +17,7 @@ app.use(bodyParser.json())
 //create route
 
 app.post('/api/category', require('./controllers/post_category'))
+app.get('/api/category', require('./controllers/get_category'))
 
 
 
