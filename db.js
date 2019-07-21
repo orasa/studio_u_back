@@ -2,9 +2,7 @@ const mongoose = require ('mongoose')
 
 
 //connecting to mongodb use mongoose to connect look at .env file
-// variable DATABASE_URL=mongodb://localhost:27017/unicorns so we can use process here
-
-
+// variable DATABASE_URL=mongodb://localhost:27017/unicorns so we can use process her
 
 
 mongoose.connect(process.env.DATABASE_URL, {useNewUrlParser: true}, (err) => {
