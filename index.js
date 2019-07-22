@@ -32,7 +32,7 @@ app.get('/api/users', require('./controllers/get_users'))
 app.post('/api/video', require('./controllers/post_video'))
 app.get('/api/videos', require('./controllers/get_videos'))
 
-app.patch('/api/likes', require('./controllers/patch_like'))
+app.patch('/api/videos/:id', require('./controllers/patch_video'))
 
 
 
