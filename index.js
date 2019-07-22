@@ -32,6 +32,8 @@ app.get('/api/users', require('./controllers/get_users'))
 app.post('/api/video', require('./controllers/post_video'))
 app.get('/api/videos', require('./controllers/get_videos'))
 
+
+//update user likes on video, id is video's id
 app.patch('/api/videos/:id', require('./controllers/patch_video'))
 
 
