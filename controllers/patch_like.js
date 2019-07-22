@@ -1,7 +1,7 @@
-const db_video = require('../models/video')
+const db_category = require('../models/category')
 
 module.exports = (req, res) => {
-	db_video.find({}).then((data) => {
+	db_category.find({}).then((data) => {
 		res.send(data)
 	}).catch((err) => {
 		res.send(err)

@@ -31,7 +31,7 @@ app.get('/api/users', require('./controllers/get_users'))
 
 
 app.post('/api/video', require('./controllers/post_video'))
-app.get('/api/video', require('./controllers/get_video'))
+app.get('/api/videos', require('./controllers/get_videos'))
 
 
 
