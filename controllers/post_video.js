@@ -9,7 +9,7 @@ module.exports = (req, res) => {
 
 console.log('req.body', req.body)
 
-	jwt.verify(req.body.token, '123', (err, decoded) => {
+	jwt.verify(req.body.token, process.env.SECRET, (err, decoded) => {
 		if (decoded) {
 			console.log('decoded', decoded)
 			req.body.user = decoded._id
