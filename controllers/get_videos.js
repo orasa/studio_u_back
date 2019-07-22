@@ -5,7 +5,7 @@ module.exports = (req, res) => {
 		path: 'category',
 		select: 'name'
 	}).populate({
-		path: 'user',
+		path: '',
 		select: 'name email'
 	}).then((data) => {
 		res.send(data)
