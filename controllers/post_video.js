@@ -16,13 +16,13 @@ module.exports = (req, res) => {
 			console.log('decoded', decoded)
 			req.body.user = decoded._id
 			db_video.create(req.body).then((data) => {
-				//populate user to det only name and email to display in front end
-				db_message.findById(data._id)
+				//populate user to get only name and email to display in front end
+				db_video.findById(data._id)
 					.populate({
 						path: 'user',
 						select: 'name email'
-					}).then((message) => {
-						res.send(message)
+					}).then((video) => {
+						res.send(video)
 					}).catch((err) => {
 						res.send(err)
 					})
