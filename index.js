@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 app.post('/api/category', require('./controllers/post_category'));
-app.get('/api/category', require('./controllers/get_categories'));
+app.get('/api/categories', require('./controllers/get_categories'));
 
 app.post('/api/signup', require('./controllers/signup'));
 app.post('/api/login', require('./controllers/login'));
