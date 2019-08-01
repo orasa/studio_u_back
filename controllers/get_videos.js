@@ -1,11 +1,12 @@
 const db_video = require('../models/video')
 
 module.exports = (req, res) => {
+	console.log("reqquery", req.query)
 	let q = {}
 	if (req.query && req.query.category) {
 		q.category = req.query.category
 	}
-	db_video.find({}).populate({
+	db_video.find(q).populate({
 		path: 'category',
 		select: 'name'
 	}).populate({
