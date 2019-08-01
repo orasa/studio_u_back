@@ -34,7 +34,8 @@ const db_video = db.model('video', {
 		}
 	],
 	likes: {
-		type: Number
+		type: Number,
+		default: 0
 	}
 })
 
